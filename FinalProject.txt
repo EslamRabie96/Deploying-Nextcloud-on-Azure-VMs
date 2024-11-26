@@ -1,0 +1,1095 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "extensions_CustomScript_storageAccountName": {
+            "type": "SecureString"
+        },
+        "extensions_CustomScript_storageAccountKey": {
+            "type": "SecureString"
+        },
+        "extensions_CustomScript_commandToExecute": {
+            "type": "SecureString"
+        },
+        "extensions_CustomScript_storageAccountName_1": {
+            "type": "SecureString"
+        },
+        "extensions_CustomScript_storageAccountKey_1": {
+            "type": "SecureString"
+        },
+        "extensions_CustomScript_commandToExecute_1": {
+            "type": "SecureString"
+        },
+        "networkInterfaces_vm1118_z3_name": {
+            "defaultValue": "vm1118_z3",
+            "type": "String"
+        },
+        "activitylogalerts_VM_was_restarted_name": {
+            "defaultValue": "VM was restarted",
+            "type": "String"
+        },
+        "virtualMachines_VM_DEPI_Final_Project_name": {
+            "defaultValue": "VM-DEPI-Final-Project",
+            "type": "String"
+        },
+        "sshPublicKeys_VM_DEPI_Final_Project_key_name": {
+            "defaultValue": "VM-DEPI-Final-Project_key",
+            "type": "String"
+        },
+        "virtualMachines_VM01_DEPI_Final_Project_name": {
+            "defaultValue": "VM01-DEPI-Final-Project",
+            "type": "String"
+        },
+        "actionGroups_Alert_the_operations_team_name": {
+            "defaultValue": "Alert the operations team",
+            "type": "String"
+        },
+        "bastionHosts_BASTION_DEPI_Final_Project_name": {
+            "defaultValue": "BASTION_DEPI_Final_Project",
+            "type": "String"
+        },
+        "virtualNetworks_VNET_DEPI_Final_Project_name": {
+            "defaultValue": "VNET_DEPI_Final_Project",
+            "type": "String"
+        },
+        "sshPublicKeys_VM01_DEPI_Final_Project_key_name": {
+            "defaultValue": "VM01-DEPI-Final-Project_key",
+            "type": "String"
+        },
+        "networkSecurityGroups_NSG_DEPI_Final_Project_name": {
+            "defaultValue": "NSG_DEPI_Final_Project",
+            "type": "String"
+        },
+        "networkInterfaces_vm_depi_final_project986_z3_name": {
+            "defaultValue": "vm-depi-final-project986_z3",
+            "type": "String"
+        },
+        "sshPublicKeys_VM01_DEPI_Final_Project_key_0930_name": {
+            "defaultValue": "VM01-DEPI-Final-Project_key_0930",
+            "type": "String"
+        },
+        "applicationGateways_AGateway_DEPI_Final_Project_name": {
+            "defaultValue": "AGateway-DEPI-Final-Project",
+            "type": "String"
+        },
+        "networkInterfaces_vm01_depi_final_project240_z3_name": {
+            "defaultValue": "vm01-depi-final-project240_z3",
+            "type": "String"
+        },
+        "networkInterfaces_vm01_depi_final_project897_z3_name": {
+            "defaultValue": "vm01-depi-final-project897_z3",
+            "type": "String"
+        },
+        "publicIPAddresses_BASTION_DEPI_Final_Project_ip_name": {
+            "defaultValue": "BASTION_DEPI_Final_Project-ip",
+            "type": "String"
+        },
+        "publicIPAddresses_AGateway_PIP_DEPI_Final_Project_name": {
+            "defaultValue": "AGateway-PIP-DEPI-Final-Project",
+            "type": "String"
+        },
+        "ApplicationGatewayWebApplicationFirewallPolicies_AG_WAF_name": {
+            "defaultValue": "AG-WAF",
+            "type": "String"
+        },
+        "publicIPAddresses_pip_vnet_depi_final_project_westeurope_snet_depi_final_project_name": {
+            "defaultValue": "pip-vnet_depi_final_project-westeurope-snet_depi_final_project",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Compute/sshPublicKeys",
+            "apiVersion": "2024-07-01",
+            "name": "[parameters('sshPublicKeys_VM01_DEPI_Final_Project_key_name')]",
+            "location": "westeurope",
+            "properties": {
+                "publicKey": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCm97ErLdk0CDc1K87lpFzAzaxSzl3XkgDPyAxHnoMUihFE6QA3QPqJfP0hrsjCPg86w+sIjOw+TMMx7z/hj+IF1G7GBSc7U9ULw2w5awjiu5SedkaUSNbVbA0mDI9gRs8v6a/j3CaVhbyZQbHvclTRKu8V97H6MoiP1YBJXFxzHbUlP+lrMyWmyAEPkENL/pcZcKLcS1lKeUrMGFKVLsoDkoxmBcwK7XpKrE3MZwVSrRxpckx+3oJjfm8xsYEgZoN8LpLFGqneP9ocIBg0nOIbgnmXZh0xIfSq5O3XcOQ4N7k/5F5RetREwK4FTFqEVlwSBp7/Y6EAxbctybcicyqPB4DQHTP+HXXYbQNN87dk/cMMFrZqgUUZubC7YJ4Np2GM66KgzGjf8MzsoK55ZfkUYSYDeXMXtoYtGsYYuVOy6XrJh6sT67JQsSen+XUlmc7Z6sfaV8EHfYca77By0J14o4QJgurROluSFj+zSuGnIVHnMbqdIg8/eaG7qUHYv2k= generated-by-azure"
+            }
+        },
+        {
+            "type": "Microsoft.Compute/sshPublicKeys",
+            "apiVersion": "2024-07-01",
+            "name": "[parameters('sshPublicKeys_VM01_DEPI_Final_Project_key_0930_name')]",
+            "location": "westeurope",
+            "properties": {
+                "publicKey": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDAh5XIY3xLpuTLPG1hvUHkFkWH76fOJot76o33CWPSIUccks1QhDja5NCSBe+DD54VoP2ivA/bBMA7YiuiHNShTj4nuOsFyMsrHiJr4np1/85OWXD+5oq3VPaPvKNUC/r8SDIRGA/Ezfeodt2qGbhequf0YgN9uvswCCMqIb2SrLNwXzeQc2qxuWYltM1n8SaWUIM80XoXHqIBIq0BEFlnkscTSLdbDlmGCIjPHzdwdW9WBaNXviq9siRCgdrEN2yMnTxKvGXV00jLcT/zBCDqfGH/45Dz0dhdMafaCjyoHTNLPK+crWj54xxnKy+bKTFxACslsAfXZaKnLgl94LxAXHOgmpqCcZQ7SPn3KAHtqTeRvb5Z5UcZRi+L7R4PevMICst0YZAy7iIr+LQH7LICVaunlmRk089VmROpsIv8zfNnUrmekGRHmF8529OYRpYJABckko8Xh5Ciul8wD7d0kcvU32WH0mAHsX51aULTEIi6Tze8ATMr2cm0Y8EZJyU= generated-by-azure"
+            }
+        },
+        {
+            "type": "Microsoft.Compute/sshPublicKeys",
+            "apiVersion": "2024-07-01",
+            "name": "[parameters('sshPublicKeys_VM_DEPI_Final_Project_key_name')]",
+            "location": "westeurope",
+            "properties": {
+                "publicKey": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDgkEy/LAoI6NwJZiKxelXA4Z4fm8oLxfoRhFXyLksSRah828uilzOi17TqPVMuiyqIdBBIDaoPQml5+7UGXu6R8dscmBCHC5MVU4r8ms5e18xqYICX7dhiRbA47r8O87icQrRj0AEmR9eyQFQjMJFBUe1ANXRq7HAWfR8leiM3hMzuFhRBSDrmKkDFyLawjfllGTXsragaqrvN0BuzBbaU7mLIveMHviFtwdTpRj5Cat6FmGNxe/iyn+4ZhOeTfJGqWi+OeQY1HnlGqvgzGo55ObeBTm70olDXP95tOrEdZKYeeGBJETBZd2YC3e64Iq1H2qmEZKkTlPFfJv5qgyqehKGY9z336yYhqFtEr0LaWaYa8BV7auj/zikxBKwfJGSV6hMH89v10Gpsf/stjmNZDns4rTkAglfbf0B1jAiJAgKlgZR1bxwOh3ZPgDMSIUE8hwGWEIYpeK4Wixrp5zXWH2TJnb3IsuRm8w3PG6ymz1FqcCinirMVOVBDdv1dolk= generated-by-azure"
+            }
+        },
+        {
+            "type": "microsoft.insights/actionGroups",
+            "apiVersion": "2023-09-01-preview",
+            "name": "[parameters('actionGroups_Alert_the_operations_team_name')]",
+            "location": "Global",
+            "properties": {
+                "groupShortName": "AlertOpsTeam",
+                "enabled": true,
+                "emailReceivers": [
+                    {
+                        "name": "VM was restarted_-EmailAction-",
+                        "emailAddress": "eslam.r2015@gmail.com",
+                        "useCommonAlertSchema": false
+                    }
+                ],
+                "smsReceivers": [],
+                "webhookReceivers": [],
+                "eventHubReceivers": [],
+                "itsmReceivers": [],
+                "azureAppPushReceivers": [],
+                "automationRunbookReceivers": [],
+                "voiceReceivers": [],
+                "logicAppReceivers": [],
+                "azureFunctionReceivers": [],
+                "armRoleReceivers": []
+            }
+        },
+        {
+            "type": "Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies",
+            "apiVersion": "2024-01-01",
+            "name": "[parameters('ApplicationGatewayWebApplicationFirewallPolicies_AG_WAF_name')]",
+            "location": "westeurope",
+            "properties": {
+                "customRules": [],
+                "policySettings": {
+                    "requestBodyCheck": true,
+                    "maxRequestBodySizeInKb": 128,
+                    "fileUploadLimitInMb": 100,
+                    "state": "Enabled",
+                    "mode": "Detection",
+                    "requestBodyInspectLimitInKB": 128,
+                    "fileUploadEnforcement": true,
+                    "requestBodyEnforcement": true
+                },
+                "managedRules": {
+                    "managedRuleSets": [
+                        {
+                            "ruleSetType": "OWASP",
+                            "ruleSetVersion": "3.2",
+                            "ruleGroupOverrides": []
+                        }
+                    ],
+                    "exclusions": []
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Network/networkSecurityGroups",
+            "apiVersion": "2024-01-01",
+            "name": "[parameters('networkSecurityGroups_NSG_DEPI_Final_Project_name')]",
+            "location": "westeurope",
+            "properties": {
+                "securityRules": [
+                    {
+                        "name": "AllowMyIpAddressHTTPSInbound",
+                        "id": "[resourceId('Microsoft.Network/networkSecurityGroups/securityRules', parameters('networkSecurityGroups_NSG_DEPI_Final_Project_name'), 'AllowMyIpAddressHTTPSInbound')]",
+                        "type": "Microsoft.Network/networkSecurityGroups/securityRules",
+                        "properties": {
+                            "protocol": "TCP",
+                            "sourcePortRange": "*",
+                            "destinationPortRange": "443",
+                            "sourceAddressPrefix": "156.200.108.205",
+                            "destinationAddressPrefix": "*",
+                            "access": "Allow",
+                            "priority": 100,
+                            "direction": "Inbound",
+                            "sourcePortRanges": [],
+                            "destinationPortRanges": [],
+                            "sourceAddressPrefixes": [],
+                            "destinationAddressPrefixes": []
+                        }
+                    },
+                    {
+                        "name": "AllowCidrBlockHTTPInbound",
+                        "id": "[resourceId('Microsoft.Network/networkSecurityGroups/securityRules', parameters('networkSecurityGroups_NSG_DEPI_Final_Project_name'), 'AllowCidrBlockHTTPInbound')]",
+                        "type": "Microsoft.Network/networkSecurityGroups/securityRules",
+                        "properties": {
+                            "description": "Allow_My_Public_IP",
+                            "protocol": "TCP",
+                            "sourcePortRange": "*",
+                            "destinationPortRange": "80",
+                            "sourceAddressPrefix": "156.200.108.205",
+                            "destinationAddressPrefix": "*",
+                            "access": "Allow",
+                            "priority": 110,
+                            "direction": "Inbound",
+                            "sourcePortRanges": [],
+                            "destinationPortRanges": [],
+                            "sourceAddressPrefixes": [],
+                            "destinationAddressPrefixes": []
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "type": "Microsoft.Network/publicIPAddresses",
+            "apiVersion": "2024-01-01",
+            "name": "[parameters('publicIPAddresses_AGateway_PIP_DEPI_Final_Project_name')]",
+            "location": "westeurope",
+            "sku": {
+                "name": "Standard",
+                "tier": "Regional"
+            },
+            "zones": [
+                "1",
+                "2",
+                "3"
+            ],
+            "properties": {
+                "ipAddress": "98.64.53.161",
+                "publicIPAddressVersion": "IPv4",
+                "publicIPAllocationMethod": "Static",
+                "idleTimeoutInMinutes": 4,
+                "dnsSettings": {
+                    "domainNameLabel": "depi",
+                    "fqdn": "depi.westeurope.cloudapp.azure.com"
+                },
+                "ipTags": [],
+                "ddosSettings": {
+                    "protectionMode": "VirtualNetworkInherited"
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Network/publicIPAddresses",
+            "apiVersion": "2024-01-01",
+            "name": "[parameters('publicIPAddresses_BASTION_DEPI_Final_Project_ip_name')]",
+            "location": "westeurope",
+            "sku": {
+                "name": "Standard",
+                "tier": "Regional"
+            },
+            "properties": {
+                "ipAddress": "52.148.248.126",
+                "publicIPAddressVersion": "IPv4",
+                "publicIPAllocationMethod": "Static",
+                "idleTimeoutInMinutes": 4,
+                "ipTags": []
+            }
+        },
+        {
+            "type": "Microsoft.Network/publicIPAddresses",
+            "apiVersion": "2024-01-01",
+            "name": "[parameters('publicIPAddresses_pip_vnet_depi_final_project_westeurope_snet_depi_final_project_name')]",
+            "location": "westeurope",
+            "sku": {
+                "name": "Standard",
+                "tier": "Regional"
+            },
+            "properties": {
+                "ipAddress": "4.210.209.138",
+                "publicIPAddressVersion": "IPv4",
+                "publicIPAllocationMethod": "Static",
+                "idleTimeoutInMinutes": 4,
+                "ipTags": [],
+                "ddosSettings": {
+                    "protectionMode": "VirtualNetworkInherited"
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Compute/virtualMachines",
+            "apiVersion": "2024-07-01",
+            "name": "[parameters('virtualMachines_VM01_DEPI_Final_Project_name')]",
+            "location": "westeurope",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_vm01_depi_final_project897_z3_name'))]"
+            ],
+            "zones": [
+                "3"
+            ],
+            "identity": {
+                "type": "SystemAssigned"
+            },
+            "properties": {
+                "hardwareProfile": {
+                    "vmSize": "Standard_B2ls_v2"
+                },
+                "additionalCapabilities": {
+                    "hibernationEnabled": false
+                },
+                "storageProfile": {
+                    "imageReference": {
+                        "publisher": "canonical",
+                        "offer": "ubuntu-24_04-lts",
+                        "sku": "ubuntu-pro",
+                        "version": "latest"
+                    },
+                    "osDisk": {
+                        "osType": "Linux",
+                        "name": "[concat(parameters('virtualMachines_VM01_DEPI_Final_Project_name'), '_OsDisk_1_c160fd9468ca421eaf1e5212beaf7bb4')]",
+                        "createOption": "FromImage",
+                        "caching": "ReadWrite",
+                        "managedDisk": {
+                            "id": "[resourceId('Microsoft.Compute/disks', concat(parameters('virtualMachines_VM01_DEPI_Final_Project_name'), '_OsDisk_1_c160fd9468ca421eaf1e5212beaf7bb4'))]"
+                        },
+                        "deleteOption": "Delete"
+                    },
+                    "dataDisks": [],
+                    "diskControllerType": "SCSI"
+                },
+                "osProfile": {
+                    "computerName": "[parameters('virtualMachines_VM01_DEPI_Final_Project_name')]",
+                    "adminUsername": "depi",
+                    "linuxConfiguration": {
+                        "disablePasswordAuthentication": true,
+                        "ssh": {
+                            "publicKeys": [
+                                {
+                                    "path": "/home/depi/.ssh/authorized_keys",
+                                    "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDAh5XIY3xLpuTLPG1hvUHkFkWH76fOJot76o33CWPSIUccks1QhDja5NCSBe+DD54VoP2ivA/bBMA7YiuiHNShTj4nuOsFyMsrHiJr4np1/85OWXD+5oq3VPaPvKNUC/r8SDIRGA/Ezfeodt2qGbhequf0YgN9uvswCCMqIb2SrLNwXzeQc2qxuWYltM1n8SaWUIM80XoXHqIBIq0BEFlnkscTSLdbDlmGCIjPHzdwdW9WBaNXviq9siRCgdrEN2yMnTxKvGXV00jLcT/zBCDqfGH/45Dz0dhdMafaCjyoHTNLPK+crWj54xxnKy+bKTFxACslsAfXZaKnLgl94LxAXHOgmpqCcZQ7SPn3KAHtqTeRvb5Z5UcZRi+L7R4PevMICst0YZAy7iIr+LQH7LICVaunlmRk089VmROpsIv8zfNnUrmekGRHmF8529OYRpYJABckko8Xh5Ciul8wD7d0kcvU32WH0mAHsX51aULTEIi6Tze8ATMr2cm0Y8EZJyU= generated-by-azure"
+                                }
+                            ]
+                        },
+                        "provisionVMAgent": true,
+                        "patchSettings": {
+                            "patchMode": "ImageDefault",
+                            "assessmentMode": "ImageDefault"
+                        }
+                    },
+                    "secrets": [],
+                    "allowExtensionOperations": true,
+                    "requireGuestProvisionSignal": true
+                },
+                "securityProfile": {
+                    "uefiSettings": {
+                        "secureBootEnabled": true,
+                        "vTpmEnabled": true
+                    },
+                    "securityType": "TrustedLaunch"
+                },
+                "networkProfile": {
+                    "networkInterfaces": [
+                        {
+                            "id": "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_vm01_depi_final_project897_z3_name'))]",
+                            "properties": {
+                                "deleteOption": "Detach"
+                            }
+                        }
+                    ]
+                },
+                "diagnosticsProfile": {
+                    "bootDiagnostics": {
+                        "enabled": true
+                    }
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Compute/virtualMachines",
+            "apiVersion": "2024-07-01",
+            "name": "[parameters('virtualMachines_VM_DEPI_Final_Project_name')]",
+            "location": "westeurope",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_vm_depi_final_project986_z3_name'))]"
+            ],
+            "zones": [
+                "3"
+            ],
+            "identity": {
+                "type": "SystemAssigned"
+            },
+            "properties": {
+                "hardwareProfile": {
+                    "vmSize": "Standard_D2s_v3"
+                },
+                "additionalCapabilities": {
+                    "hibernationEnabled": false
+                },
+                "storageProfile": {
+                    "imageReference": {
+                        "publisher": "canonical",
+                        "offer": "ubuntu-24_04-lts",
+                        "sku": "server",
+                        "version": "latest"
+                    },
+                    "osDisk": {
+                        "osType": "Linux",
+                        "name": "[concat(parameters('virtualMachines_VM_DEPI_Final_Project_name'), '_OsDisk_1_2b17f263bb27415fa9caac802317bd05')]",
+                        "createOption": "FromImage",
+                        "caching": "ReadWrite",
+                        "managedDisk": {
+                            "id": "[resourceId('Microsoft.Compute/disks', concat(parameters('virtualMachines_VM_DEPI_Final_Project_name'), '_OsDisk_1_2b17f263bb27415fa9caac802317bd05'))]"
+                        },
+                        "deleteOption": "Delete"
+                    },
+                    "dataDisks": [],
+                    "diskControllerType": "SCSI"
+                },
+                "osProfile": {
+                    "computerName": "[parameters('virtualMachines_VM_DEPI_Final_Project_name')]",
+                    "adminUsername": "depi",
+                    "linuxConfiguration": {
+                        "disablePasswordAuthentication": true,
+                        "ssh": {
+                            "publicKeys": [
+                                {
+                                    "path": "/home/depi/.ssh/authorized_keys",
+                                    "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDgkEy/LAoI6NwJZiKxelXA4Z4fm8oLxfoRhFXyLksSRah828uilzOi17TqPVMuiyqIdBBIDaoPQml5+7UGXu6R8dscmBCHC5MVU4r8ms5e18xqYICX7dhiRbA47r8O87icQrRj0AEmR9eyQFQjMJFBUe1ANXRq7HAWfR8leiM3hMzuFhRBSDrmKkDFyLawjfllGTXsragaqrvN0BuzBbaU7mLIveMHviFtwdTpRj5Cat6FmGNxe/iyn+4ZhOeTfJGqWi+OeQY1HnlGqvgzGo55ObeBTm70olDXP95tOrEdZKYeeGBJETBZd2YC3e64Iq1H2qmEZKkTlPFfJv5qgyqehKGY9z336yYhqFtEr0LaWaYa8BV7auj/zikxBKwfJGSV6hMH89v10Gpsf/stjmNZDns4rTkAglfbf0B1jAiJAgKlgZR1bxwOh3ZPgDMSIUE8hwGWEIYpeK4Wixrp5zXWH2TJnb3IsuRm8w3PG6ymz1FqcCinirMVOVBDdv1dolk= generated-by-azure"
+                                }
+                            ]
+                        },
+                        "provisionVMAgent": true,
+                        "patchSettings": {
+                            "patchMode": "ImageDefault",
+                            "assessmentMode": "ImageDefault"
+                        }
+                    },
+                    "secrets": [],
+                    "allowExtensionOperations": true,
+                    "requireGuestProvisionSignal": true
+                },
+                "securityProfile": {
+                    "uefiSettings": {
+                        "secureBootEnabled": true,
+                        "vTpmEnabled": true
+                    },
+                    "securityType": "TrustedLaunch"
+                },
+                "networkProfile": {
+                    "networkInterfaces": [
+                        {
+                            "id": "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_vm_depi_final_project986_z3_name'))]",
+                            "properties": {
+                                "deleteOption": "Detach"
+                            }
+                        }
+                    ]
+                },
+                "diagnosticsProfile": {
+                    "bootDiagnostics": {
+                        "enabled": true
+                    }
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Compute/virtualMachines/extensions",
+            "apiVersion": "2024-07-01",
+            "name": "[concat(parameters('virtualMachines_VM01_DEPI_Final_Project_name'), '/CustomScript')]",
+            "location": "westeurope",
+            "dependsOn": [
+                "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_VM01_DEPI_Final_Project_name'))]"
+            ],
+            "properties": {
+                "autoUpgradeMinorVersion": true,
+                "publisher": "Microsoft.Azure.Extensions",
+                "type": "CustomScript",
+                "typeHandlerVersion": "2.0",
+                "settings": {
+                    "fileUris": [
+                        "https://raw.githubusercontent.com/Azure/azure-docs-powershell-samples/master/application-gateway/iis/install_nginx.sh"
+                    ]
+                },
+                "protectedSettings": {
+                    "storageAccountName": "[parameters('extensions_CustomScript_storageAccountName')]",
+                    "storageAccountKey": "[parameters('extensions_CustomScript_storageAccountKey')]",
+                    "commandToExecute": "[parameters('extensions_CustomScript_commandToExecute')]"
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Compute/virtualMachines/extensions",
+            "apiVersion": "2024-07-01",
+            "name": "[concat(parameters('virtualMachines_VM_DEPI_Final_Project_name'), '/CustomScript')]",
+            "location": "westeurope",
+            "dependsOn": [
+                "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_VM_DEPI_Final_Project_name'))]"
+            ],
+            "properties": {
+                "autoUpgradeMinorVersion": true,
+                "publisher": "Microsoft.Azure.Extensions",
+                "type": "CustomScript",
+                "typeHandlerVersion": "2.0",
+                "settings": {
+                    "fileUris": [
+                        "https://raw.githubusercontent.com/Azure/azure-docs-powershell-samples/master/application-gateway/iis/install_nginx.sh"
+                    ]
+                },
+                "protectedSettings": {
+                    "storageAccountName": "[parameters('extensions_CustomScript_storageAccountName_1')]",
+                    "storageAccountKey": "[parameters('extensions_CustomScript_storageAccountKey_1')]",
+                    "commandToExecute": "[parameters('extensions_CustomScript_commandToExecute_1')]"
+                }
+            }
+        },
+        {
+            "type": "microsoft.insights/activitylogalerts",
+            "apiVersion": "2020-10-01",
+            "name": "[parameters('activitylogalerts_VM_was_restarted_name')]",
+            "location": "global",
+            "dependsOn": [
+                "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_Alert_the_operations_team_name'))]"
+            ],
+            "properties": {
+                "scopes": [
+                    "/subscriptions/3230c4f9-c060-4b05-a107-d82bcac078ca/resourcegroups/RG_DEPI_Final_Project"
+                ],
+                "condition": {
+                    "allOf": [
+                        {
+                            "field": "category",
+                            "equals": "Administrative"
+                        },
+                        {
+                            "field": "operationName",
+                            "equals": "Microsoft.Compute/virtualMachines/restart/action"
+                        }
+                    ]
+                },
+                "actions": {
+                    "actionGroups": [
+                        {
+                            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_Alert_the_operations_team_name'))]",
+                            "webhookProperties": {}
+                        }
+                    ]
+                },
+                "enabled": false,
+                "description": "A VM in your resource group was restarted!\n"
+            }
+        },
+        {
+            "type": "Microsoft.Network/networkInterfaces",
+            "apiVersion": "2024-01-01",
+            "name": "[parameters('networkInterfaces_vm01_depi_final_project240_z3_name')]",
+            "location": "westeurope",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_VNET_DEPI_Final_Project_name'), 'SNET_DEPI_Final_Project')]"
+            ],
+            "kind": "Regular",
+            "properties": {
+                "ipConfigurations": [
+                    {
+                        "name": "ipconfig1",
+                        "id": "[concat(resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_vm01_depi_final_project240_z3_name')), '/ipConfigurations/ipconfig1')]",
+                        "type": "Microsoft.Network/networkInterfaces/ipConfigurations",
+                        "properties": {
+                            "privateIPAddress": "172.10.1.5",
+                            "privateIPAllocationMethod": "Dynamic",
+                            "subnet": {
+                                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_VNET_DEPI_Final_Project_name'), 'SNET_DEPI_Final_Project')]"
+                            },
+                            "primary": true,
+                            "privateIPAddressVersion": "IPv4"
+                        }
+                    }
+                ],
+                "dnsSettings": {
+                    "dnsServers": []
+                },
+                "enableAcceleratedNetworking": true,
+                "enableIPForwarding": false,
+                "disableTcpStateTracking": false,
+                "nicType": "Standard",
+                "auxiliaryMode": "None",
+                "auxiliarySku": "None"
+            }
+        },
+        {
+            "type": "Microsoft.Network/networkInterfaces",
+            "apiVersion": "2024-01-01",
+            "name": "[parameters('networkInterfaces_vm1118_z3_name')]",
+            "location": "westeurope",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_VNET_DEPI_Final_Project_name'), 'SNET_DEPI_Final_Project')]"
+            ],
+            "kind": "Regular",
+            "properties": {
+                "ipConfigurations": [
+                    {
+                        "name": "ipconfig1",
+                        "id": "[concat(resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_vm1118_z3_name')), '/ipConfigurations/ipconfig1')]",
+                        "type": "Microsoft.Network/networkInterfaces/ipConfigurations",
+                        "properties": {
+                            "privateIPAddress": "172.10.1.6",
+                            "privateIPAllocationMethod": "Dynamic",
+                            "subnet": {
+                                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_VNET_DEPI_Final_Project_name'), 'SNET_DEPI_Final_Project')]"
+                            },
+                            "primary": true,
+                            "privateIPAddressVersion": "IPv4"
+                        }
+                    }
+                ],
+                "dnsSettings": {
+                    "dnsServers": []
+                },
+                "enableAcceleratedNetworking": true,
+                "enableIPForwarding": false,
+                "disableTcpStateTracking": false,
+                "nicType": "Standard",
+                "auxiliaryMode": "None",
+                "auxiliarySku": "None"
+            }
+        },
+        {
+            "type": "Microsoft.Network/networkSecurityGroups/securityRules",
+            "apiVersion": "2024-01-01",
+            "name": "[concat(parameters('networkSecurityGroups_NSG_DEPI_Final_Project_name'), '/AllowCidrBlockHTTPInbound')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_NSG_DEPI_Final_Project_name'))]"
+            ],
+            "properties": {
+                "description": "Allow_My_Public_IP",
+                "protocol": "TCP",
+                "sourcePortRange": "*",
+                "destinationPortRange": "80",
+                "sourceAddressPrefix": "156.200.108.205",
+                "destinationAddressPrefix": "*",
+                "access": "Allow",
+                "priority": 110,
+                "direction": "Inbound",
+                "sourcePortRanges": [],
+                "destinationPortRanges": [],
+                "sourceAddressPrefixes": [],
+                "destinationAddressPrefixes": []
+            }
+        },
+        {
+            "type": "Microsoft.Network/networkSecurityGroups/securityRules",
+            "apiVersion": "2024-01-01",
+            "name": "[concat(parameters('networkSecurityGroups_NSG_DEPI_Final_Project_name'), '/AllowMyIpAddressHTTPSInbound')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_NSG_DEPI_Final_Project_name'))]"
+            ],
+            "properties": {
+                "protocol": "TCP",
+                "sourcePortRange": "*",
+                "destinationPortRange": "443",
+                "sourceAddressPrefix": "156.200.108.205",
+                "destinationAddressPrefix": "*",
+                "access": "Allow",
+                "priority": 100,
+                "direction": "Inbound",
+                "sourcePortRanges": [],
+                "destinationPortRanges": [],
+                "sourceAddressPrefixes": [],
+                "destinationAddressPrefixes": []
+            }
+        },
+        {
+            "type": "Microsoft.Network/virtualNetworks/subnets",
+            "apiVersion": "2024-01-01",
+            "name": "[concat(parameters('virtualNetworks_VNET_DEPI_Final_Project_name'), '/AzureBastionSubnet')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_VNET_DEPI_Final_Project_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "172.10.0.0/24",
+                "delegations": [],
+                "privateEndpointNetworkPolicies": "Disabled",
+                "privateLinkServiceNetworkPolicies": "Enabled"
+            }
+        },
+        {
+            "type": "Microsoft.Network/bastionHosts",
+            "apiVersion": "2024-01-01",
+            "name": "[parameters('bastionHosts_BASTION_DEPI_Final_Project_name')]",
+            "location": "westeurope",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_BASTION_DEPI_Final_Project_ip_name'))]",
+                "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_VNET_DEPI_Final_Project_name'), 'AzureBastionSubnet')]"
+            ],
+            "sku": {
+                "name": "Standard"
+            },
+            "properties": {
+                "dnsName": "bst-a0b41ead-fe60-4908-a329-884459666234.bastion.azure.com",
+                "scaleUnits": 2,
+                "enableTunneling": false,
+                "enableIpConnect": false,
+                "disableCopyPaste": false,
+                "enableShareableLink": false,
+                "enableKerberos": false,
+                "enableSessionRecording": false,
+                "ipConfigurations": [
+                    {
+                        "name": "IpConf",
+                        "id": "[concat(resourceId('Microsoft.Network/bastionHosts', parameters('bastionHosts_BASTION_DEPI_Final_Project_name')), '/bastionHostIpConfigurations/IpConf')]",
+                        "properties": {
+                            "privateIPAllocationMethod": "Dynamic",
+                            "publicIPAddress": {
+                                "id": "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_BASTION_DEPI_Final_Project_ip_name'))]"
+                            },
+                            "subnet": {
+                                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_VNET_DEPI_Final_Project_name'), 'AzureBastionSubnet')]"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "type": "Microsoft.Network/networkInterfaces",
+            "apiVersion": "2024-01-01",
+            "name": "[parameters('networkInterfaces_vm01_depi_final_project897_z3_name')]",
+            "location": "westeurope",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_VNET_DEPI_Final_Project_name'), 'SNET-1_DEPI_Final_Project')]",
+                "[resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_AGateway_DEPI_Final_Project_name'))]"
+            ],
+            "kind": "Regular",
+            "properties": {
+                "ipConfigurations": [
+                    {
+                        "name": "ipconfig1",
+                        "id": "[concat(resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_vm01_depi_final_project897_z3_name')), '/ipConfigurations/ipconfig1')]",
+                        "type": "Microsoft.Network/networkInterfaces/ipConfigurations",
+                        "properties": {
+                            "privateIPAddress": "172.10.2.4",
+                            "privateIPAllocationMethod": "Dynamic",
+                            "subnet": {
+                                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_VNET_DEPI_Final_Project_name'), 'SNET-1_DEPI_Final_Project')]"
+                            },
+                            "primary": true,
+                            "privateIPAddressVersion": "IPv4",
+                            "applicationGatewayBackendAddressPools": [
+                                {
+                                    "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_AGateway_DEPI_Final_Project_name')), '/backendAddressPools/BEPool-DEPI-Final-Project')]"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "dnsSettings": {
+                    "dnsServers": []
+                },
+                "enableAcceleratedNetworking": true,
+                "enableIPForwarding": false,
+                "disableTcpStateTracking": false,
+                "nicType": "Standard",
+                "auxiliaryMode": "None",
+                "auxiliarySku": "None"
+            }
+        },
+        {
+            "type": "Microsoft.Network/virtualNetworks",
+            "apiVersion": "2024-01-01",
+            "name": "[parameters('virtualNetworks_VNET_DEPI_Final_Project_name')]",
+            "location": "westeurope",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_AGateway_DEPI_Final_Project_name'))]",
+                "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_NSG_DEPI_Final_Project_name'))]"
+            ],
+            "properties": {
+                "addressSpace": {
+                    "addressPrefixes": [
+                        "172.10.0.0/16"
+                    ]
+                },
+                "encryption": {
+                    "enabled": false,
+                    "enforcement": "AllowUnencrypted"
+                },
+                "subnets": [
+                    {
+                        "name": "AzureBastionSubnet",
+                        "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_VNET_DEPI_Final_Project_name'), 'AzureBastionSubnet')]",
+                        "properties": {
+                            "addressPrefix": "172.10.0.0/24",
+                            "delegations": [],
+                            "privateEndpointNetworkPolicies": "Disabled",
+                            "privateLinkServiceNetworkPolicies": "Enabled"
+                        },
+                        "type": "Microsoft.Network/virtualNetworks/subnets"
+                    },
+                    {
+                        "name": "AG-Subnet",
+                        "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_VNET_DEPI_Final_Project_name'), 'AG-Subnet')]",
+                        "properties": {
+                            "addressPrefix": "172.10.3.0/24",
+                            "applicationGatewayIPConfigurations": [
+                                {
+                                    "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_AGateway_DEPI_Final_Project_name')), '/gatewayIPConfigurations/appGatewayIpConfig')]"
+                                }
+                            ],
+                            "delegations": [],
+                            "privateEndpointNetworkPolicies": "Disabled",
+                            "privateLinkServiceNetworkPolicies": "Enabled"
+                        },
+                        "type": "Microsoft.Network/virtualNetworks/subnets"
+                    },
+                    {
+                        "name": "SNET_DEPI_Final_Project",
+                        "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_VNET_DEPI_Final_Project_name'), 'SNET_DEPI_Final_Project')]",
+                        "properties": {
+                            "addressPrefix": "172.10.1.0/24",
+                            "networkSecurityGroup": {
+                                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_NSG_DEPI_Final_Project_name'))]"
+                            },
+                            "delegations": [],
+                            "privateEndpointNetworkPolicies": "Disabled",
+                            "privateLinkServiceNetworkPolicies": "Disabled"
+                        },
+                        "type": "Microsoft.Network/virtualNetworks/subnets"
+                    },
+                    {
+                        "name": "SNET-1_DEPI_Final_Project",
+                        "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_VNET_DEPI_Final_Project_name'), 'SNET-1_DEPI_Final_Project')]",
+                        "properties": {
+                            "addressPrefix": "172.10.2.0/24",
+                            "networkSecurityGroup": {
+                                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_NSG_DEPI_Final_Project_name'))]"
+                            },
+                            "delegations": [],
+                            "privateEndpointNetworkPolicies": "Disabled",
+                            "privateLinkServiceNetworkPolicies": "Enabled"
+                        },
+                        "type": "Microsoft.Network/virtualNetworks/subnets"
+                    }
+                ],
+                "virtualNetworkPeerings": [],
+                "enableDdosProtection": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/virtualNetworks/subnets",
+            "apiVersion": "2024-01-01",
+            "name": "[concat(parameters('virtualNetworks_VNET_DEPI_Final_Project_name'), '/AG-Subnet')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_VNET_DEPI_Final_Project_name'))]",
+                "[resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_AGateway_DEPI_Final_Project_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "172.10.3.0/24",
+                "applicationGatewayIPConfigurations": [
+                    {
+                        "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_AGateway_DEPI_Final_Project_name')), '/gatewayIPConfigurations/appGatewayIpConfig')]"
+                    }
+                ],
+                "delegations": [],
+                "privateEndpointNetworkPolicies": "Disabled",
+                "privateLinkServiceNetworkPolicies": "Enabled"
+            }
+        },
+        {
+            "type": "Microsoft.Network/virtualNetworks/subnets",
+            "apiVersion": "2024-01-01",
+            "name": "[concat(parameters('virtualNetworks_VNET_DEPI_Final_Project_name'), '/SNET_DEPI_Final_Project')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_VNET_DEPI_Final_Project_name'))]",
+                "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_NSG_DEPI_Final_Project_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "172.10.1.0/24",
+                "networkSecurityGroup": {
+                    "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_NSG_DEPI_Final_Project_name'))]"
+                },
+                "delegations": [],
+                "privateEndpointNetworkPolicies": "Disabled",
+                "privateLinkServiceNetworkPolicies": "Disabled"
+            }
+        },
+        {
+            "type": "Microsoft.Network/virtualNetworks/subnets",
+            "apiVersion": "2024-01-01",
+            "name": "[concat(parameters('virtualNetworks_VNET_DEPI_Final_Project_name'), '/SNET-1_DEPI_Final_Project')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_VNET_DEPI_Final_Project_name'))]",
+                "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_NSG_DEPI_Final_Project_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "172.10.2.0/24",
+                "networkSecurityGroup": {
+                    "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_NSG_DEPI_Final_Project_name'))]"
+                },
+                "delegations": [],
+                "privateEndpointNetworkPolicies": "Disabled",
+                "privateLinkServiceNetworkPolicies": "Enabled"
+            }
+        },
+        {
+            "type": "Microsoft.Network/applicationGateways",
+            "apiVersion": "2024-01-01",
+            "name": "[parameters('applicationGateways_AGateway_DEPI_Final_Project_name')]",
+            "location": "westeurope",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_VNET_DEPI_Final_Project_name'), 'AG-Subnet')]",
+                "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_AGateway_PIP_DEPI_Final_Project_name'))]",
+                "[resourceId('Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies', parameters('ApplicationGatewayWebApplicationFirewallPolicies_AG_WAF_name'))]"
+            ],
+            "zones": [
+                "1",
+                "2",
+                "3"
+            ],
+            "properties": {
+                "sku": {
+                    "name": "WAF_v2",
+                    "tier": "WAF_v2",
+                    "family": "Generation_1"
+                },
+                "gatewayIPConfigurations": [
+                    {
+                        "name": "appGatewayIpConfig",
+                        "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_AGateway_DEPI_Final_Project_name')), '/gatewayIPConfigurations/appGatewayIpConfig')]",
+                        "properties": {
+                            "subnet": {
+                                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_VNET_DEPI_Final_Project_name'), 'AG-Subnet')]"
+                            }
+                        }
+                    }
+                ],
+                "sslCertificates": [],
+                "trustedRootCertificates": [],
+                "trustedClientCertificates": [],
+                "sslProfiles": [],
+                "frontendIPConfigurations": [
+                    {
+                        "name": "appGwPublicFrontendIpIPv4",
+                        "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_AGateway_DEPI_Final_Project_name')), '/frontendIPConfigurations/appGwPublicFrontendIpIPv4')]",
+                        "properties": {
+                            "privateIPAllocationMethod": "Dynamic",
+                            "publicIPAddress": {
+                                "id": "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_AGateway_PIP_DEPI_Final_Project_name'))]"
+                            }
+                        }
+                    }
+                ],
+                "frontendPorts": [
+                    {
+                        "name": "port_80",
+                        "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_AGateway_DEPI_Final_Project_name')), '/frontendPorts/port_80')]",
+                        "properties": {
+                            "port": 80
+                        }
+                    }
+                ],
+                "backendAddressPools": [
+                    {
+                        "name": "BEPool-DEPI-Final-Project",
+                        "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_AGateway_DEPI_Final_Project_name')), '/backendAddressPools/BEPool-DEPI-Final-Project')]",
+                        "properties": {
+                            "backendAddresses": []
+                        }
+                    }
+                ],
+                "loadDistributionPolicies": [],
+                "backendHttpSettingsCollection": [
+                    {
+                        "name": "BESetting-DEPI-Final-Project",
+                        "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_AGateway_DEPI_Final_Project_name')), '/backendHttpSettingsCollection/BESetting-DEPI-Final-Project')]",
+                        "properties": {
+                            "port": 80,
+                            "protocol": "Http",
+                            "cookieBasedAffinity": "Disabled",
+                            "pickHostNameFromBackendAddress": false,
+                            "requestTimeout": 20
+                        }
+                    }
+                ],
+                "backendSettingsCollection": [],
+                "httpListeners": [
+                    {
+                        "name": "AG-Listener-DEPI-Final-Project",
+                        "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_AGateway_DEPI_Final_Project_name')), '/httpListeners/AG-Listener-DEPI-Final-Project')]",
+                        "properties": {
+                            "frontendIPConfiguration": {
+                                "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_AGateway_DEPI_Final_Project_name')), '/frontendIPConfigurations/appGwPublicFrontendIpIPv4')]"
+                            },
+                            "frontendPort": {
+                                "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_AGateway_DEPI_Final_Project_name')), '/frontendPorts/port_80')]"
+                            },
+                            "protocol": "Http",
+                            "hostNames": [],
+                            "requireServerNameIndication": false,
+                            "customErrorConfigurations": []
+                        }
+                    }
+                ],
+                "listeners": [],
+                "urlPathMaps": [],
+                "requestRoutingRules": [
+                    {
+                        "name": "AG-RRule-DEPI-Final-Project",
+                        "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_AGateway_DEPI_Final_Project_name')), '/requestRoutingRules/AG-RRule-DEPI-Final-Project')]",
+                        "properties": {
+                            "ruleType": "Basic",
+                            "priority": 10,
+                            "httpListener": {
+                                "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_AGateway_DEPI_Final_Project_name')), '/httpListeners/AG-Listener-DEPI-Final-Project')]"
+                            },
+                            "backendAddressPool": {
+                                "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_AGateway_DEPI_Final_Project_name')), '/backendAddressPools/BEPool-DEPI-Final-Project')]"
+                            },
+                            "backendHttpSettings": {
+                                "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_AGateway_DEPI_Final_Project_name')), '/backendHttpSettingsCollection/BESetting-DEPI-Final-Project')]"
+                            }
+                        }
+                    }
+                ],
+                "routingRules": [],
+                "probes": [],
+                "rewriteRuleSets": [],
+                "redirectConfigurations": [],
+                "privateLinkConfigurations": [],
+                "enableHttp2": false,
+                "autoscaleConfiguration": {
+                    "minCapacity": 0,
+                    "maxCapacity": 10
+                },
+                "firewallPolicy": {
+                    "id": "[resourceId('Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies', parameters('ApplicationGatewayWebApplicationFirewallPolicies_AG_WAF_name'))]"
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Network/networkInterfaces",
+            "apiVersion": "2024-01-01",
+            "name": "[parameters('networkInterfaces_vm_depi_final_project986_z3_name')]",
+            "location": "westeurope",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_pip_vnet_depi_final_project_westeurope_snet_depi_final_project_name'))]",
+                "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_VNET_DEPI_Final_Project_name'), 'SNET_DEPI_Final_Project')]",
+                "[resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_AGateway_DEPI_Final_Project_name'))]"
+            ],
+            "kind": "Regular",
+            "properties": {
+                "ipConfigurations": [
+                    {
+                        "name": "ipconfig1",
+                        "id": "[concat(resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_vm_depi_final_project986_z3_name')), '/ipConfigurations/ipconfig1')]",
+                        "type": "Microsoft.Network/networkInterfaces/ipConfigurations",
+                        "properties": {
+                            "privateIPAddress": "172.10.1.4",
+                            "privateIPAllocationMethod": "Dynamic",
+                            "publicIPAddress": {
+                                "id": "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_pip_vnet_depi_final_project_westeurope_snet_depi_final_project_name'))]"
+                            },
+                            "subnet": {
+                                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_VNET_DEPI_Final_Project_name'), 'SNET_DEPI_Final_Project')]"
+                            },
+                            "primary": true,
+                            "privateIPAddressVersion": "IPv4",
+                            "applicationGatewayBackendAddressPools": [
+                                {
+                                    "id": "[concat(resourceId('Microsoft.Network/applicationGateways', parameters('applicationGateways_AGateway_DEPI_Final_Project_name')), '/backendAddressPools/BEPool-DEPI-Final-Project')]"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "dnsSettings": {
+                    "dnsServers": []
+                },
+                "enableAcceleratedNetworking": true,
+                "enableIPForwarding": false,
+                "disableTcpStateTracking": false,
+                "nicType": "Standard",
+                "auxiliaryMode": "None",
+                "auxiliarySku": "None"
+            }
+        }
+    ]
+}
